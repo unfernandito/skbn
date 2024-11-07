@@ -176,6 +176,9 @@ func UploadToS3(iClient interface{}, toPath, fromPath string, reader io.Reader, 
 			Bucket: aws.String(bucket),
 			Key:    aws.String(s3Path),
 			Body:   reader,
+			ContentDisposition: aws.String("attachment"),
+			// ContentLength:      aws.Int64(int64(len(buffer))),
+			// ContentType:        aws.String(http.DetectContentType(buffer)),
 		})
 
 		if verbose {
