@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"http",
+	"http"
 
 	"github.com/nuvo/skbn/pkg/utils"
 
