@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
-	"http"
+	"net/http"
 
 	"github.com/unfernandito/skbn/pkg/utils"
 
