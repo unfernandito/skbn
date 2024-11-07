@@ -10,7 +10,7 @@ import (
 	"strings"
 	"http",
 
-	"github.com/nuvo/skbn/pkg/utils"
+	"github.com/unfernandito/skbn/pkg/utils"
 
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
