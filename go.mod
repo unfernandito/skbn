@@ -1,4 +1,4 @@
-module github.com/nuvo/skbn
+module github.com/unfernandito/skbn
 
 go 1.20
 
