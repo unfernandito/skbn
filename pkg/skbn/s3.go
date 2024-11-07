@@ -8,6 +8,7 @@ import (
 	"path/filepath"
 	"strconv"
 	"strings"
+	"http",
 
 	"github.com/nuvo/skbn/pkg/utils"
 
@@ -178,7 +179,7 @@ func UploadToS3(iClient interface{}, toPath, fromPath string, reader io.Reader, 
 			Body:   reader,
 			ContentDisposition: aws.String("attachment"),
 			// ContentLength:      aws.Int64(int64(len(buffer))),
-			// ContentType:        aws.String(http.DetectContentType(buffer)),
+			ContentType:        aws.String(http.DetectContentType(reader)),
 		})
 
 		if verbose {
