@@ -176,9 +176,10 @@ func UploadToS3(iClient interface{}, toPath, fromPath string, reader io.Reader, 
 		// Lee una porción del contenido del reader en un buffer
 		buf := make([]byte, 512) // 512 bytes es suficiente para determinar el tipo MIME
 		n, err := reader.Read(buf)
+		
 		if err != nil && err != io.EOF {
 			fmt.Println("Error al leer el contenido:", err)
-			return
+			return err
 		}
 
 		_, err := uploader.Upload(&s3manager.UploadInput{
